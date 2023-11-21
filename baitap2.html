@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals</title>
+</head>
+<body>
+    <script>
+        let animalsList = []
+
+        let addAnimals = (ID, name) => 
+        {
+            let exists = animalsList.some((am) => am.ID === ID)
+
+            if (!exists)
+            {
+                animalsList.push({ID, name})
+                console.log( 'add ' + name + ' successfully' )
+            }
+            else
+            {
+                console.log(name + ' exists')
+            }
+        }
+
+        let printList = () =>
+        {
+            console.log('animals list')
+            animalsList.forEach((am) =>
+            {
+                console.log('Animal ID:' + am.ID , 'Animal name:' + am.name)
+            })
+        }
+        
+        let deleteAnimal = (ID) =>
+        {
+            let index = animalsList.findIndex((am) => am.ID)
+
+            if (index !== -1)
+            {
+                animalsList.splice (index, 1)
+                console.log('delete successfully')
+            } 
+            else
+            {
+                console.log('cannot find animals that has id' + ID)
+                
+            }
+        }
+
+        addAnimals (1, 'Lions')
+        addAnimals (2, 'Bears')
+
+        addAnimals (1, 'Lions')
+    </script>
+</body>
+</html>

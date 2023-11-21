@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinh toan</title>
+</head>
+<body>
+    
+    <script>
+        class Information 
+        {
+            constructor(name, description, parameter = 1)
+            {
+                this.name = name
+                this.description = description
+                this.parameter = parameter
+            }
+            counting(inputParameter)
+            {
+                return inputParameter * 3
+            }
+        }
+
+        class Shape extends Information 
+        {
+        constructor(name, description, length, parameter = 1 )
+        {
+            super(name, description, parameter)
+            this.length = length
+        }
+        
+
+        counting(inputParameter)
+        {
+            return super.counting(inputParameter) * this.length
+        }
+    }
+        let rectangle = new Shape('Rectangle', 'rectangle has langth and width', 5, 2)
+        
+        console.log('name', rectangle.name)
+        console.log('length', rectangle.length)
+        console.log('description', rectangle.description)
+        console.log('parameter', rectangle.parameter)
+    </script>
+</body>
+</html>

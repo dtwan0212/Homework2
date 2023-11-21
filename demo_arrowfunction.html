@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow function</title>
+   
+</head>
+<body>
+    
+<script>
+    // Một tham số, Một câu lệnh
+    let greet = name => console.log('jdf' + name + '?')
+    greet('ddjhfdskfhdh')
+    
+    // Nhiều tham số, Một câu lệnh
+    let multiply = (x, y) => x * y
+    console.log(multiply(6, 10))
+
+    // Một tham số, Nhiều câu lệnh
+    let checkAge = age => 
+    {
+        if (age > 10)
+        {
+            console.log('dhf')
+        }
+        else{
+            console.log('m')
+        }
+    }
+    checkAge(19)
+
+    // Nhiều tham số, Nhiều câu lệnh
+    var divide = (x, y) => 
+    {
+        if (y !== 0)
+        {
+            return x / y
+        }
+        
+    }
+    console.log(divide(10, 2))
+
+    // Không tham số, Một câu lệnh
+    let hello = () => console.log('hello')
+    hello()
+
+
+
+</script>
+ 
+    
+</body>
+</html>

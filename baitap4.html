@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter&Setter</title>
+</head>
+<body>
+    <script>
+        class Person
+        {
+            constructor(name)
+            {
+                this.name = name
+            }
+
+            get name()
+            {
+                this._name = name 
+            }
+            set name(name)
+            {
+                this._name = name 
+            }
+            walk()
+            {
+                console.log(this.name + 'is walking')
+            }
+
+           
+        }
+        class Programmer extends Person
+            {
+                constructor(name, programmingLanguage)
+                {
+                    super(name)
+                    this._programmingLanguage = programmingLanguage
+                }
+
+                get programmingLanguage()
+                {
+                    return this._programmingLanguage
+                }
+                set programmingLanguage(programmingLanguage)
+                {
+                    this._programmingLanguage = programmingLanguage
+                }
+                
+                writeCode()
+                {
+                    console.log((this._name) + 'is writing code in' + this._programmingLanguage)
+                }
+            }
+        const programmer = new Programmer('toan', 'pyhton')
+        programmer.walk()
+        console.log(programmer.name)
+        programmer.writeCode()
+
+    </script>
+</body>
+</html>
